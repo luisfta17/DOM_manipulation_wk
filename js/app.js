@@ -10,17 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameInput = form.name.value;
     const contactInput = form.contact_details.value;
     const commentInput = form.comment.value;
-    const text = `I want to read: ${nameInput} from the author: ${contactInput} that belongs to ${commentInput}`;
+    const nameFilled = `Name: ${nameInput}`;
+    const contactFilled = `Contact info: ${contactInput}`;
+    const commentFilled = `${commentInput}`;
 
     const name = document.createElement('p');
-    name.textContent = text;
+    name.textContent = nameFilled;
     commentList.append(name);
     const contact = document.createElement('p');
-    contact.textContent = text;
+    contact.textContent = contactFilled;
     commentList.append(contact);
     const comment = document.createElement('p');
-    comment.textContent = text;
+    comment.textContent = commentFilled;
     commentList.append(comment);
+    const breaker = document.createElement('hr');
+    commentList.append(breaker);
     form.reset();
 
   }
